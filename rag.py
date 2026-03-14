@@ -1,25 +1,51 @@
 from search import search_documents
 
+
 def build_context(results):
-    context = ""
+    texts = []
 
     for r in results:
-        context += r["metadata"]["text"] + "\n\n"
+        text = r.get("metadata", {}).get("text", "")
+        if text:
+            texts.append(text)
 
-    return context
+    return texts
 
 
-def generate_answer(question, context):
+def extract_relevant_sentences(question, documents):
+
+    question_words = set(question.lower().split())
+
+    relevant = []
+
+    for doc in documents:
+        sentences = doc.split(".")
+        for s in sentences:
+            words = set(s.lower().split())
+
+            if len(question_words.intersection(words)) > 0:
+                relevant.append(s.strip())
+
+    return relevant
+
+
+def generate_answer(question, documents):
+
+    if not documents:
+        return f"No relevant information found for: {question}"
+
+    sentences = extract_relevant_sentences(question, documents)
+
+    if not sentences:
+        sentences = documents
+
+    summary = ". ".join(sentences[:3])
 
     answer = f"""
 Question: {question}
 
-Based on the following documents:
-
-{context}
-
 Answer:
-The question relates to the above information. The most relevant explanation is provided using the retrieved knowledge base documents.
+{summary}
 """
 
     return answer
@@ -27,13 +53,10 @@ The question relates to the above information. The most relevant explanation is 
 
 def rag_pipeline(question):
 
-    # Retrieve top documents
     results = search_documents(question, top_k=3)
 
-    # Build context
-    context = build_context(results)
+    documents = build_context(results)
 
-    # Generate answer
-    answer = generate_answer(question, context)
+    answer = generate_answer(question, documents)
 
     return answer, results

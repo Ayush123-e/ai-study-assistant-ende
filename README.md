@@ -39,22 +39,22 @@ graph TD;
 
 ```text
 ai-study-assistant-endee/
-│
-├── app.py             # Streamlit UI
-├── ingest.py          # Document ingestion and embedding generation
-├── rag.py             # Retrieval Augmented Generation pipeline
-├── search.py          # Vector search logic
-├── search_test.py     # Command-line testing script
-├── requirements.txt   # Project dependencies
-├── README.md
-│
-├── data/              # Knowledge base documents
-│   ├── ai.txt
-│   ├── ml.txt
-│   ├── devops.txt
-│   └── datascience.txt
-│
-└── embeddings/        # Reserved for embeddings storage
+
+ app.py             # Streamlit UI
+ ingest.py          # Document ingestion and embedding generation
+ rag.py             # Retrieval Augmented Generation pipeline
+ search.py          # Vector search logic
+ search_test.py     # Command-line testing script
+ requirements.txt   # Project dependencies
+ README.md
+
+ data/              # Knowledge base documents
+    ai.txt
+    ml.txt
+    devops.txt
+    datascience.txt
+
+ embeddings/        # Reserved for embeddings storage
 ```
 
 ---

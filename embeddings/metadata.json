@@ -1,0 +1,14 @@
+{
+  "datascience.txt": {
+    "text": "Data Science involves extracting insights from structured and unstructured data using statistics, machine learning, and data visualization.\n"
+  },
+  "devops.txt": {
+    "text": "DevOps is a culture and practice that combines software development and IT operations.\n\nIt focuses on continuous integration, continuous delivery, automation, and monitoring.\n"
+  },
+  "ml.txt": {
+    "text": "Machine Learning is a subset of artificial intelligence that allows systems to learn patterns from data.\n\nIt includes supervised learning, unsupervised learning, and reinforcement learning.\n"
+  },
+  "ai.txt": {
+    "text": "Artificial Intelligence (AI) is a field of computer science focused on creating systems that can perform tasks requiring human intelligence.\n\nAI applications include natural language processing, computer vision, robotics, and recommendation systems.\n"
+  }
+}
