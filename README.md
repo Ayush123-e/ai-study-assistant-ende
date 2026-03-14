@@ -12,6 +12,19 @@ Vector storage and similarity search are powered by **Endee Vector Database**.
 
 ---
 
+## Screenshots
+
+**Home Page**
+
+![AI Study Assistant - Home](assets/1.png)
+
+**Search Results**
+
+![AI Study Assistant - Results](assets/2.png)
+
+---
+
+
 ## Problem Statement
 
 Traditional keyword-based search often fails to understand the meaning of a query. This project solves that problem using semantic search, which retrieves documents based on meaning rather than exact keywords.
