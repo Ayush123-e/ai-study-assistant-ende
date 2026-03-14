@@ -1,0 +1,3 @@
+DevOps is a culture and practice that combines software development and IT operations.
+
+It focuses on continuous integration, continuous delivery, automation, and monitoring.
