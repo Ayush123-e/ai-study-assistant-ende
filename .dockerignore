@@ -6,7 +6,6 @@ venv
 .venv
 .env
 data/
-embeddings/
 *.txt
 !requirements.txt
 !runtime.txt

@@ -15,11 +15,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# Metadata needs to be present for the app to function properly
-# We already pushed it earlier, but making sure it's copied
-COPY embeddings/ /app/embeddings/
-
 EXPOSE 8501
+
 
 CMD ["streamlit", "run", "app.py", "--server.port", "8501", "--server.address", "0.0.0.0"]
 
