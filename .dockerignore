@@ -1,0 +1,12 @@
+.git
+.idea
+__pycache__
+*.pyc
+venv
+.venv
+.env
+data/
+embeddings/
+*.txt
+!requirements.txt
+!runtime.txt
