@@ -4,7 +4,7 @@ import requests
 from sentence_transformers import SentenceTransformer
 
 # Endee server URL
-ENDEE_URL = "http://localhost:8080/api/v1"
+ENDEE_URL = os.environ.get("ENDEE_URL", "http://localhost:8080/api/v1")
 INDEX_NAME = "documents"
 METADATA_STORE = "embeddings/metadata.json"
 
