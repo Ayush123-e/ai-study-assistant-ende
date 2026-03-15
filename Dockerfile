@@ -20,5 +20,5 @@ RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTr
 
 EXPOSE 8501
 
-# Use the PORT environment variable provided by Railway
-CMD streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+# Force shell execution to ensure $PORT is properly interpolated
+ENTRYPOINT ["sh", "-c", "streamlit run app.py --server.port ${PORT:-8501} --server.address 0.0.0.0"]
